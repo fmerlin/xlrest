@@ -1,0 +1,36 @@
+{
+	"logger" : {
+		"active": true,
+		"host": "rms.gdfsuez.net",
+		"port": 8310,
+		"authorization" : "Splunk 6FA6AA69-9FDA-4A69-AB0D-9D3086D9F039",
+		"context": "/splunk-log/services/collector/event",
+		"prefix": "",
+		"use_https": false,
+		"use_proxy": false
+	},
+	"localhost" : {
+		"active": true,
+		"host": "rms.gdfsuez.net",
+		"port": 8310,
+		"context": "/sds-dev",
+		"use_https": false,
+		"use_proxy": false,
+		"prefix": "sds_",
+		"category" : "sds",
+		"methods" : ["GET"],
+		"tags": ["system","environments","reports","deals","snapshots","activity"]
+	},
+	"localhost2" : {
+		"active": true,
+		"host": "localhost",
+		"port": 8300,
+		"context": "/kernel",
+		"use_https": false,
+		"use_proxy": false,	
+		"prefix": "rms_",
+		"category" : "rms",
+		"methods" : ["GET","POST","PUT"],
+		"tags": ["system","environments","reports","deals","snapshots","activity","underlyings"]
+	}
+}
